@@ -18,7 +18,7 @@ pipeline{
         stage("DockerImage"){
             steps{
                 echo "Creating Docker Image"
-                sh 'docker build -t kedar89/ttrend:v1'
+                sh 'docker build -t ttrend:v1'
                 echo "Pushing Docker Image"
                 sh 'docker push kedar89/ttrend:v1'
             }
