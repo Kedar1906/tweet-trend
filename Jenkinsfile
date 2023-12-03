@@ -19,8 +19,6 @@ pipeline{
             steps{
                 echo "Creating Docker Image"
                 sh 'docker build -t kedar89/ttrend:v1 .'
-                echo "loggin into repo"
-                sh 'docker login -u "kedar89" -p "honor#1234" docker.io'
                 echo "Pushing Docker Image"
                 sh 'docker push kedar89/ttrend:v1'
             }
