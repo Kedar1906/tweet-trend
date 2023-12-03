@@ -15,6 +15,14 @@ pipeline{
                 echo "----build completed"
             }
         }
+        stage("DockerImage"){
+            steps{
+                echo "Creating Docker Image"
+                sh 'docker buil -t kedar89/ttrend:v1'
+                echo "Pushing Docker Image"
+                sh 'docker push kedar89/ttrend:v1'
+            }
+        }
     }
 
 }
